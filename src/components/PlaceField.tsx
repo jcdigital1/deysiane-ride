@@ -64,8 +64,6 @@ export function PlaceField({
     return () => {
       cancelled = true;
       clearTimeout(timer);
-275;
-      clearTimeout(timer);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value, coords?.lat, coords?.lng]);
