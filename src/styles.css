@@ -148,5 +148,44 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    background-image:
+      radial-gradient(circle at 12% -5%, oklch(0.66 0.25 350 / 0.22), transparent 45%),
+      radial-gradient(circle at 95% 12%, oklch(0.66 0.25 350 / 0.12), transparent 40%);
+    background-attachment: fixed;
   }
 }
+
+@utility field-input {
+  background-color: var(--field);
+  color: var(--field-foreground);
+  caret-color: var(--primary);
+}
+
+@utility glow-pink {
+  box-shadow: var(--shadow-glow);
+}
+
+@utility card-soft {
+  box-shadow: var(--shadow-card);
+}
+
+@utility bg-gradient-pink {
+  background-image: var(--gradient-pink);
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(0.85);
+  }
+}
+
+@utility animate-pulse-dot {
+  animation: pulse-dot 1.8s ease-in-out infinite;
+}
+
